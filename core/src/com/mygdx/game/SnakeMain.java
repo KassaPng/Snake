@@ -17,6 +17,7 @@ public class SnakeMain extends Game {
         font.getData().setScale((float)1.2);
         font.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         this.setScreen(new GameScreen(this));
+
     }
 
     @Override

@@ -38,7 +38,7 @@ public class GameScreen implements Screen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         main.batch.begin();
         main.font.draw(main.batch, "SCORE: " + game.getScore(), 10, 30);
-        if (game.getControls().getPause() == true && game.getDead() == false) {
+        if (game.getControls().getPause() && game.getDead() == false) {
             main.font.draw(main.batch, "PAUSED. Press any key to resume",
                     Gdx.graphics.getWidth()/2-130, Gdx.graphics.getHeight()/2);
         }

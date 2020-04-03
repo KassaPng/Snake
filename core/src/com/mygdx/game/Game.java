@@ -16,6 +16,7 @@ public class Game {
     private ShapeRenderer shapeRenderer = new ShapeRenderer();
     private Queue<SnakeBody> bodyQueue = new Queue<>();
     private float mTimer = 0;
+    private float speed = 0.04f;
     private Controls controls = new Controls();
     private Food food = new Food(boardSize);
     private int snakeLength = 3;
@@ -60,7 +61,7 @@ public class Game {
     public void update(float delta) {
         if (controls.getPause() == false) {
             mTimer += delta;
-            if (mTimer > 0.04f) {
+            if (mTimer > speed) {
                 mTimer = 0;
                 advance();
             }

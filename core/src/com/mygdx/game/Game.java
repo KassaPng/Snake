@@ -59,7 +59,7 @@ public class Game {
     }
 
     public void update(float delta) {
-        if (controls.getPause() == false) {
+        if (!controls.getPause()) {
             mTimer += delta;
             if (mTimer > speed) {
                 mTimer = 0;
